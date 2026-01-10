@@ -1,0 +1,331 @@
+/* FULL PAGE */
+.adminWrapper {
+  width: 100vw;
+  min-height: 100vh;
+  background: #020202;
+  color: #e8fff2;
+  padding-top: 80px;
+}
+
+/* NAVBAR */
+.adminNav {
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 30, 15, 0.55);
+  border-bottom: 1px solid rgba(0, 255, 157, 0.25);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.adminLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.adminLogo {
+  width: 45px;
+  height: 45px;
+}
+
+.adminTitle {
+  font-size: 22px;
+  color: #00ffae;
+  text-shadow: 0 0 10px #00ffae;
+}
+
+/* LOGOUT BUTTON */
+.logoutBtn {
+  padding: 8px 18px;
+  background: #00ff9d;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.logoutBtn:hover {
+  box-shadow: 0 0 15px #00ff9d;
+}
+
+/* GRID CARDS */
+.adminGrid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.adminCard {
+  padding: 20px;
+  background: rgba(0, 35, 20, 0.45);
+  border: 1px solid rgba(0, 255, 157, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 18px rgba(0, 255, 157, 0.15);
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.adminCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00ff9d;
+}
+
+.metric {
+  font-size: 26px;
+  margin-top: 10px;
+}
+
+.metric.green { color: #00ff95; }
+.metric.red   { color: #ff5e5e; }
+.metric.yellow { color: #ffe76a; }
+
+/* ACTIVITY PANEL */
+.adminPanel {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(0, 35, 20, 0.45);
+  border: 1px solid rgba(0, 255, 170, 0.25);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.15);
+  display: flex;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .adminNav {
+    padding: 0 15px;
+  }
+  
+  .adminTitle {
+    font-size: 18px;
+  }
+  
+  .adminGrid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stack the teams list and details panel vertically on small screens
+     so selecting a team shows details below the list instead of off-screen. */
+  .adminPanel {
+    flex-direction: column;
+    align-items: stretch;
+    width: 96%;
+    max-width: 960px;
+  }
+
+  .adminPanel > div {
+    width: 100%;
+    flex: none;
+  }
+}
+
+.panelTitle {
+  color: #00ffae;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.logBox {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #cfffec;
+  background: rgba(0, 20, 10, 0.4);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,255,150,0.2);
+}
+/* FULL PAGE */
+/* FULL PAGE */
+.adminWrapper {
+  width: 100vw;
+  min-height: 100vh;
+  background: #020202;
+  color: #e8fff2;
+  padding-top: 80px;
+}
+
+/* NAVBAR */
+.adminNav {
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 30, 15, 0.55);
+  border-bottom: 1px solid rgba(0, 255, 157, 0.25);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.adminLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* FULL PAGE */
+.adminWrapper {
+  width: 100vw;
+  min-height: 100vh;
+  background: #020202;
+  color: #e8fff2;
+  padding-top: 80px;
+}
+
+/* NAVBAR */
+.adminNav {
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 30, 15, 0.55);
+  border-bottom: 1px solid rgba(0, 255, 157, 0.25);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.adminLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.adminLogo {
+  width: 45px;
+  height: 45px;
+}
+
+.adminTitle {
+  font-size: 22px;
+  color: #00ffae;
+  text-shadow: 0 0 10px #00ffae;
+}
+
+/* LOGOUT BUTTON */
+.logoutBtn {
+  padding: 8px 18px;
+  background: #00ff9d;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.logoutBtn:hover {
+  box-shadow: 0 0 15px #00ff9d;
+}
+
+/* GRID CARDS */
+.adminGrid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.adminCard {
+  padding: 20px;
+  background: rgba(0, 35, 20, 0.45);
+  border: 1px solid rgba(0, 255, 157, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 18px rgba(0, 255, 157, 0.15);
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.adminCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00ff9d;
+}
+
+.metric {
+  font-size: 26px;
+  margin-top: 10px;
+}
+
+.metric.green { color: #00ff95; }
+.metric.red   { color: #ff5e5e; }
+.metric.yellow { color: #ffe76a; }
+
+/* ACTIVITY PANEL */
+.adminPanel {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(0, 35, 20, 0.45);
+  border: 1px solid rgba(0, 255, 170, 0.25);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.15);
+  display: flex;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .adminNav {
+    padding: 0 15px;
+  }
+  
+  .adminTitle {
+    font-size: 18px;
+  }
+  
+  .adminGrid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stack the teams list and details panel vertically on small screens
+     so selecting a team shows details below the list instead of off-screen. */
+  .adminPanel {
+    flex-direction: column;
+    align-items: stretch;
+    width: 96%;
+    max-width: 960px;
+  }
+
+  .adminPanel > div {
+    width: 100%;
+    flex: none;
+  }
+}
+
+.panelTitle {
+  color: #00ffae;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.logBox {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #cfffec;
+  background: rgba(0, 20, 10, 0.4);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,255,150,0.2);
+}

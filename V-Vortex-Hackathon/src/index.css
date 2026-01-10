@@ -1,0 +1,185 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Force full black background everywhere */
+html, body {
+  background: #000 !important;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Share Tech Mono", monospace;
+  color: #fcfbfb;
+}
+
+:root{
+  --container-padding: 16px;
+  /* responsive base font size */
+  font-size: clamp(14px, 1.6vw, 16px);
+}
+
+/* helpers: fluid container and touch-friendly controls */
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+button, .navBtn, input[type="text"], input[type="email"], input[type="password"], .form-control{
+  min-height: 44px;
+  font-size: 1rem;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+input, textarea, select { width: 100%; }
+
+/* make images responsive by default */
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---------------------- */
+/* WRAPPER */
+/* ---------------------- */
+.homeWrapper {
+  background-color: #000;
+  width: 100%;
+  min-height: 100vh;
+  background: #000; /* vortex canvas shows through */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------------------- */
+/* TOP NAVIGATION BAR */
+/* ---------------------- */
+.topNav {
+  width: 100%;
+  padding: 18px 40px;
+  background: rgba(40, 60, 55, 0.4);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 255, 180, 0.2);
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navLogo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 12px #00ffcc;
+}
+
+.brandName {
+  font-size: 1.4rem;
+  color: #00ffbf;
+  text-shadow: 0 0 12px #00ffbf;
+}
+
+/* Nav buttons */
+.navRight {
+  display: flex;
+  gap: 14px;
+}
+
+.navBtn {
+  padding: 8px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Share Tech Mono", monospace;
+  background: #0affc2;
+  color: #000;
+  transition: 0.2s ease;
+  box-shadow: 0 0 12px #0affc2;
+}
+
+.navBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px #0affc2;
+}
+
+.navBtn.secondary {
+  background: transparent;
+  border: 1px solid #0affc2;
+  color: #0affc2;
+}
+
+.navBtn.secondary:hover {
+  background: rgba(10, 255, 194, 0.12);
+}
+
+/* ---------------------- */
+/* ABOUT SECTION */
+/* ---------------------- */
+
+.aboutSection {
+  margin-top: 80px;
+  width: 65%;
+  background: rgba(60, 80, 75, 0.35);
+  padding: 40px 55px;
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 255, 200, 0.15);
+  box-shadow: 0 0 22px rgba(0, 255, 200, 0.2);
+}
+
+.aboutTitle {
+  font-size: 2.3rem;
+  color: #00ffc8;
+  margin-bottom: 22px;
+  text-shadow: 0 0 15px #00ffc8;
+}
+
+.aboutText {
+  font-size: 1.15rem;
+  line-height: 1.7rem;
+  color: #d0e7e0;
+}
+
+.accent {
+  color: #00ffbf;
+  text-shadow: 0 0 8px #00ffbf;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .aboutSection {
+    width: 85%;
+    padding: 30px;
+  }
+
+  .topNav {
+    padding: 16px 24px;
+  }
+
+  .brandName {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .topNav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navRight {
+    gap: 12px;
+  }
+
+  .aboutSection {
+    width: 92%;
+  }
+}

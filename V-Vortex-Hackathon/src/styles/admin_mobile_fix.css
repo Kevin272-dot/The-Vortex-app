@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+  /* Force vertical stacking on small screens */
+  .adminPanel {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 96% !important;
+    max-width: 960px !important;
+  }
+
+  .adminPanel > div {
+    width: 100% !important;
+    flex: none !important;
+  }
+}

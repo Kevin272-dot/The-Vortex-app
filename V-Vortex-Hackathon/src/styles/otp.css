@@ -1,0 +1,236 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.otpWrapper {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  position: relative; /* ensure z-index works */
+  background: transparent;
+  overflow: hidden;
+  font-family: "Share Tech Mono", monospace;
+  color: #d6eaff;
+}
+
+/* MARQUEE */
+.marquee-bar {
+  width: 100%;
+  padding: 6px 0;
+  border-bottom: 2px solid #ff00ff;
+  background: rgba(255, 0, 255, 0.05);
+  position: fixed;
+  top: 0;
+  z-index: 60; /* above canvas */
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marqueeRoll 20s linear infinite;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #ff4cff;
+  text-shadow: 0 0 6px #ff00ff;
+}
+
+.marquee-track span {
+  padding: 0 40px;
+}
+
+@keyframes marqueeRoll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* OTP BOX */
+.otpBox {
+  width: min(650px, 90vw);
+  margin: 120px auto 0 auto;
+  background: rgba(10, 0, 20, 0.9);
+  border: 2px solid #ff00ff;
+  border-radius: 8px;
+  padding: 40px;
+  position: relative;
+  z-index: 55; /* above canvas */
+  position: relative;
+  box-shadow:
+    0 0 25px #ff00ff,
+    0 0 60px rgba(0, 255, 240, 0.2),
+    0 0 90px rgba(255, 0, 255, 0.25);
+}
+
+@media (max-width: 600px) {
+  .otpBox {
+    padding: 20px;
+    margin-top: 80px;
+  }
+  
+  .otpHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .headerDots {
+    display: none;
+  }
+}
+
+/* HEADER */
+.otpHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ff00ff;
+}
+
+.headerLeft {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.headerLogo {
+  width: 38px;
+  height: 38px;
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffc5ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+/* DOTS */
+.headerDots {
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #ff00ff;
+}
+
+.d1 { border-color: cyan; }
+.d2 { border-color: magenta; }
+.d3 { border-color: orange; }
+
+/* SUBTITLE */
+.otpSubtitle {
+  text-align: center;
+  margin: 12px 0 28px;
+  color: #c7d9ff;
+  letter-spacing: 2px;
+}
+
+/* INPUT */
+.fieldLabel {
+  display: block;
+  margin: 15px 0 6px;
+  color: #5effff;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.otpInput {
+  width: 100%;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 2px solid #ff00ff;
+  color: #9beaff;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 8px;
+  font-weight: bold;
+  outline: none;
+  transition: 0.25s;
+}
+
+.otpInput:focus {
+  border-color: cyan;
+  box-shadow: 0 0 25px cyan;
+}
+
+/* HELPER */
+.helper {
+  margin-top: 6px;
+  color: #7f9ca6;
+  font-size: 12px;
+}
+
+/* VERIFY BUTTON */
+.verifyBtn {
+  width: 100%;
+  margin-top: 26px;
+  padding: 14px;
+  background: rgba(255, 0, 255, 0.08);
+  border: 2px solid #ff00ff;
+  color: #ffbdff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.verifyBtn:hover {
+  background: rgba(0, 255, 255, 0.1);
+  border-color: cyan;
+  box-shadow: 0 0 25px cyan;
+}
+
+/* BACK BUTTON */
+.backBtn {
+  text-align: center;
+  margin-top: 18px;
+  cursor: pointer;
+  color: #7fe8ff;
+  transition: 0.3s;
+}
+
+.backBtn:hover {
+  text-shadow: 0 0 10px cyan;
+  color: cyan;
+}
+
+/* STATUS BAR */
+.otpStatusBar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 0, 255, 0.05);
+  border-top: 2px solid #ff00ff;
+  padding: 8px 20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  color: #7ffcff;
+  letter-spacing: 1px;
+  z-index: 60; /* above canvas */
+}
+
+.statusItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  background: cyan;
+  border-radius: 50%;
+  box-shadow: 0 0 8px cyan;
+}

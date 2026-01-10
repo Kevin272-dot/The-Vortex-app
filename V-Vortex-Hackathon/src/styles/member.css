@@ -1,0 +1,322 @@
+/* ===============================
+   ROOT + RESET
+================================ */
+:root {
+  --bg-dark: #020617;
+  --card-bg: rgba(15, 23, 42, 0.65);
+  --purple: #8b5cf6;
+  --pink: #ec4899;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--bg-dark);
+  color: var(--text-main);
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   BACKGROUND MESH
+================================ */
+.mesh-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(139, 92, 246, 0.15), transparent 35%),
+    radial-gradient(circle at 100% 100%, rgba(236, 72, 153, 0.12), transparent 35%);
+}
+
+/* ===============================
+   LAYOUT
+================================ */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .main {
+    margin-left: 288px;
+  }
+}
+
+/* ===============================
+   GLASS EFFECT
+================================ */
+.glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===============================
+   SIDEBAR
+================================ */
+.sidebar {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 288px;
+  height: 100vh;
+  z-index: 50;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    display: flex;
+  }
+}
+
+.sidebar-header {
+  padding: 32px;
+}
+
+.sidebar-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.sidebarLogoImg {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(217,70,239,0.25);
+} 
+
+.sidebar-subtitle {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--purple);
+  text-transform: uppercase;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 0 16px;
+}
+
+.sidebar-btn {
+  width: 100%;
+  padding: 14px 20px;
+  margin-bottom: 8px;
+  border-radius: 14px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.sidebar-btn:hover {
+  color: white;
+}
+
+.sidebar-btn.active {
+  background: linear-gradient(
+    90deg,
+    rgba(139, 92, 246, 0.18),
+    transparent
+  );
+  color: white;
+  position: relative;
+}
+
+.sidebar-btn.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15%;
+  height: 70%;
+  width: 4px;
+  background: var(--purple);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 0 15px var(--purple);
+}
+
+/* ===============================
+   USER CARD
+================================ */
+.sidebar-user {
+  padding: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.user-box {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 18px;
+}
+
+.user-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.user-meta p:first-child {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.user-meta p:last-child {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.header p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.clock {
+  padding: 12px 20px;
+  border-radius: 18px;
+  text-align: right;
+}
+
+.clock span {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.clock strong {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 20px;
+}
+
+/* ===============================
+   PAGE ANIMATION
+================================ */
+.page {
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   CONTENT
+================================ */
+.content {
+  padding: 32px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===============================
+   CARDS
+================================ */
+.card {
+  padding: 32px;
+  border-radius: 32px;
+}
+
+.center {
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.card p {
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 18px;
+}
+
+/* ===============================
+   QR PLACEHOLDER
+================================ */
+.qr-box {
+  width: 260px;
+  height: 260px;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px auto;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+.primary-btn {
+  margin-top: 24px;
+  padding: 16px;
+  width: 100%;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  color: white;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.primary-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.35);
+}

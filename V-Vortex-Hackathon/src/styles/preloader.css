@@ -1,0 +1,174 @@
+/* Remove browser margins */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ===============================
+   TAP TO BEGIN SCREEN
+================================ */
+#enterScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  z-index: 500;
+  transition: transform 0.4s ease;
+}
+
+#enterText {
+  font-size: 38px;
+  margin-bottom: 12px;
+  color: #00ff9d;
+  animation: pulse 1.6s infinite alternate ease;
+  text-shadow: 0 0 12px #00ff9d;
+}
+
+#arrow {
+  font-size: 26px;
+  color: #00ff9d;
+  opacity: 0.85;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  from { opacity: 0.4; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1.06); }
+}
+
+@media (max-width: 600px) {
+  #enterText {
+    font-size: 24px;
+  }
+  #arrow {
+    font-size: 20px;
+  }
+}
+
+/* Zoom-in cinematic effect */
+.tapZoom {
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+/* ===============================
+   GLITCH EFFECT LAYER
+================================ */
+.glitchLayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    transparent,
+    rgba(0,255,157,0.03) 2px
+  );
+  mix-blend-mode: difference;
+  animation: glitchMove 0.6s infinite linear alternate;
+  pointer-events: none;
+}
+
+@keyframes glitchMove {
+  from { transform: translateY(0); }
+  to { transform: translateY(10px); }
+}
+
+/* ===============================
+   INTRO VIDEO
+================================ */
+#introVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  z-index: 900;
+  
+  /* Disable video controls completely */
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Remove default video controls styling */
+#introVideo::-webkit-media-controls {
+  display: none !important;
+}
+
+#introVideo::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+#introVideo::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+#introVideo::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+#introVideo::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+.videoFadeOut {
+  opacity: 0 !important;
+}
+
+/* ===============================
+   WHITE FLASH TRANSITION
+================================ */
+#flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2000;
+  transition: opacity 0.2s ease-out;
+}
+
+.flashVisible {
+  opacity: 1;
+}
+
+/* ===============================
+   SCANLINE OVERLAY
+================================ */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: repeating-linear-gradient(
+    transparent 0,
+    rgba(0, 255, 100, 0.055) 2px
+  );
+
+  mix-blend-mode: overlay;
+  opacity: 0.08;
+  z-index: 1500;
+  pointer-events: none;
+}
