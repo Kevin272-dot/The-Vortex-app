@@ -103,4 +103,7 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 
 ---
 
-<p align="center">Made with ❤️ by the V-Vortex Team at VIT Chennai</p>
+<p align="center">Made by the V-Vortex web dev team
+Lead - L.Kevin Daniel
+Members - Ibhan Mukerjee,Devangshu Pandey and srijan Guchhait
+at VIT Chennai</p>
