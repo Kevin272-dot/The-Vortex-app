@@ -1,18 +1,106 @@
-# React + Vite
+# 🌀 V-Vortex Hackathon
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A comprehensive hackathon management platform for VIT Chennai
 
-Currently, two official plugins are available:
+[![Live Demo](https://img.shields.io/badge/Live-v--vortex.in-blue?style=for-the-badge)](https://v-vortex.in)
+[![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-7.2-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev)
+[![Supabase](https://img.shields.io/badge/Supabase-Backend-3ECF8E?style=for-the-badge&logo=supabase)](https://supabase.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 Overview
 
-## React Compiler
+V-Vortex is a full-featured web application designed to handle all aspects of hackathon management, including:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- 👥 **Attendee Registration** - Seamless participant sign-up flow
+- 🏗️ **Team Formation** - Build and manage hackathon teams
+- 📝 **Problem staement selector 
+- 📊 **Real-time Scorekeeping** - Live leaderboard and scoring system
+- 🔧 **Administrative Tools** - Comprehensive admin dashboard
 
-Note: This will impact Vite dev & build performances.
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+| Technology | Purpose |
+|------------|---------|
+| **React 19** | Frontend UI library |
+| **Vite 7** | Build tool & dev server |
+| **React Router 7** | Client-side routing |
+| **Supabase** | Backend, Auth & Database |
+| **Vercel** | Deployment & hosting |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+- Supabase account (for backend)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/V-Vortex-VIT/V-Vortex-Hackathon.git
+   cd V-Vortex-Hackathon
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   
+   Create a `.env` file in the root directory:
+   ```env
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   
+   Navigate to [http://localhost:5173](http://localhost:5173)
+
+## 📜 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with HMR |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint checks |
+
+## 📁 Project Structure
+
+```
+V-Vortex-Hackathon/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # Route pages
+│   ├── styles/          # CSS stylesheets
+│   ├── utils/           # Utility functions
+│   ├── App.jsx          # Main app component
+│   └── main.jsx         # Entry point
+├── supabase/
+│   ├── functions/       # Edge functions
+│   └── migrations/      # Database migrations
+└── package.json
+```
+
+## 🔗 Links
+
+- 🌐 **Live Site**: [v-vortex.in](https://v-vortex.in)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/V-Vortex-VIT/V-Vortex-Hackathon/issues)
+
+## 📄 License
+
+This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<p align="center">Made with ❤️ by the V-Vortex Team at VIT Chennai</p>
